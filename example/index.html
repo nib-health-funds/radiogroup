@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <div class="js-radiogroup">
+
+        <input type="radio" id="red" name="color" value="red"/>
+        <label for="red">Red</label>
+
+        <input type="radio" id="green" name="color" value="green"/>
+        <label for="green">Green</label>
+
+        <input type="radio" id="blue" name="color" value="blue"/>
+        <label for="blue">Blue</label>
+
+        <input type="radio" id="brown" name="color" value="brown"/>
+        <label for="brown">Brown</label>
+
+    </div>
+
+    <script src="../build/build.js"></script>
+    <script>
+
+        var radiogroup = require('radiogroup');
+
+        radiogroup(document.querySelector('body'))
+            .on('selected', function() {
+                console.log('selected:', this.value, this.values);
+            })
+            .on('changed', function() {
+                console.log('changed:', this.value, this.values);
+            })
+            .select(3)
+            .select(null)
+        ;
+
+    </script>
+</body>
+</html>

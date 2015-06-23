@@ -1,0 +1,7 @@
+{
+  "name": "radiogroup",
+  "scripts": ["index.js"],
+  "dependencies": {
+    "digitaledgeit/js-view": "^0.1.10"
+  }
+}
